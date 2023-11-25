@@ -6,7 +6,7 @@ import java.io.IOException;
 import utilities.OptimizedScanner;
 import utilities.OptimizedWriter;
 
-public class Quicksort {
+public class QuickSort {
 	public static void main(String[] args) {
 		File file = new File("sorting_input_b.txt");
 		OptimizedScanner scanner = null;

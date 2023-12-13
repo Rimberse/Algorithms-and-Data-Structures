@@ -95,3 +95,16 @@ At each step, it chooses a pivot element and performs partition around it. Then 
 
 ## Implementation Notes
 We can use the function implemented in the partition algorithm.
+
+
+## How to Run
+To execute the program, follow these steps:
+
+1. Compile the code
+   ```console
+   $ javac AlgorithmImplementation.java
+   ```
+2. Run the program
+    ```console
+   $ java AlgorithmImplementation
+   ```

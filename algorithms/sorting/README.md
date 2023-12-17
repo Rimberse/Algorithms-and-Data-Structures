@@ -156,6 +156,35 @@ Outputs the result of merging these two arrays, i.e., `M` + `N` integers separat
 To solve this problem, it is recommended to implement a function that takes two pairs of iterators as input, defining two arrays, and an iterator to the beginning of the buffer where the result should be written. Iterators can be replaced by passing arrays and indices in them. In this form, it will be convenient to use this function to implement the merge sort.
 
 
+## **Algorithm: Merge Sort**
+
+### Description
+At each step, merge sort algorithm divides the array into two parts, sorts them independently, and merges them using the merge function (implemented in `Merging.java`).
+
+### Problem Statement
+#### Input
+- The first line of the input file contains the number `N` — the number of elements in the array (0 ≤ `N` ≤ 10^6).
+- The second line contains `N` integers `ai`, separated by spaces (-10^9 ≤ `ai` ≤ 10^9).
+
+#### Output
+Prints the result of the sort, i.e., `N` integers separated by spaces, in non-decreasing order.
+
+#### Example
+#### Input
+```plaintext
+5
+1 5 2 4 3
+```
+
+#### Output
+```plaintext
+1 2 3 4 5
+```
+
+## Implementation Notes
+It is recommended to use the function implemented in `Merging.java`.
+
+
 ## How to Run
 To execute the program, follow these steps:
 

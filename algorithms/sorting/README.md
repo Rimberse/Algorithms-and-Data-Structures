@@ -185,6 +185,74 @@ Prints the result of the sort, i.e., `N` integers separated by spaces, in non-de
 It is recommended to use the function implemented in `Merging.java`.
 
 
+## **Algorithm: Radix Sort**
+
+### Description
+Radix sort is one of the sorting algorithms that operates almost in linear time with respect to the size of the array to be sorted. This efficiency is achieved by utilizing the internal structure of the objects being sorted. Initially, this algorithm was used for sorting punched cards. Its first computer implementation was created at `MIT` by `Harold N. Seward`. Let's describe the algorithm in more detail.
+
+Consider an array of strings, `s1, ..., si`, where all strings have the same length, `m`. The algorithm consists of `m` phases. In the `i-th` phase, the strings are sorted based on their `i-th` letter from the end. This process occurs as follows: for simplicity, let's consider strings consisting of digits from `0` to `9` in this task. For each digit, a "bucket" is created, and then the strings `si` are distributed into the "buckets" according to the `i-th` digit from the end. Strings with the `i-th` digit from the end equal to `j` go into the `j-th` bucket (for example, the string `123` will go into the third bucket in the first phase, the second bucket in the second phase, and the first bucket in the third phase). After that, elements are extracted from the buckets in the order of increasing bucket number. Thus, after the first phase, the strings are sorted by the last digit, after two phases - by the last two digits, ..., after `m` phases - by all digits. It is crucial that the elements in the buckets preserve the same order as in the original array (before the start of this phase). For example, if the array before the first phase looks like: `111, 112, 211, 311`, then the elements will be distributed among the buckets as follows: in the first bucket: `111, 211, 311`, and in the second: `112`.
+
+This program clearly demonstrates the operation of this algorithm on a given array.
+
+### Problem Statement
+#### Input
+- The first line of the input file contains an integer n (1 ≤ `n` ≤ 1000).
+- The following `n` lines each contain one string `si`.
+- The lengths of all `si` are the same and do not exceed 20.
+- All `si` consist only of digits from `0` to `9`.
+
+#### Output
+Outputs the original array of strings, the state of the "buckets" after distributing the elements to them for each phase, and the sorted array in the output file. Follows the format given in the example.
+
+## Example
+### Input
+```plaintext
+9
+12
+32
+45
+67
+98
+29
+61
+35
+09
+```
+
+#### Output
+```plaintext
+Initial array:
+12, 32, 45, 67, 98, 29, 61, 35, 09
+**********
+Phase 1
+Bucket 0: empty
+Bucket 1: 61
+Bucket 2: 12, 32
+Bucket 3: empty
+Bucket 4: empty
+Bucket 5: 45, 35
+Bucket 6: empty
+Bucket 7: 67
+Bucket 8: 98
+Bucket 9: 29, 09
+**********
+Phase 2
+Bucket 0: 09
+Bucket 1: 12
+Bucket 2: 29
+Bucket 3: 32, 35
+Bucket 4: 45
+Bucket 5: empty
+Bucket 6: 61, 67
+Bucket 7: empty
+Bucket 8: empty
+Bucket 9: 98
+**********
+Sorted array:
+09, 12, 29, 32, 35, 45, 61, 67, 98
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

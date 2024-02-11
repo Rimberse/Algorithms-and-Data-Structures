@@ -56,6 +56,29 @@ NOT FOUND
 ```
 
 
+## **Algorithm: Add Two Fractions**
+
+### Description
+Given two rational fractions: `a/b` and `c/d`. Adds them, and represents the result in the form of an irreducible fraction `m/n`.
+
+### Problem Statement
+#### Input
+- The program receives `4` natural numbers `a, b, c, d`, each of which is not greater than 100.
+
+#### Output
+The program should output two natural numbers `m` and `n` such that `m/n` = `a/b` + `c/d` and the fraction `m/n` is in its irreducible form.
+
+#### Input
+```plaintext
+1 2 1 2
+```
+
+#### Output
+```plaintext
+1 1
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

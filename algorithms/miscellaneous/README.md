@@ -68,6 +68,7 @@ Given two rational fractions: `a/b` and `c/d`. Adds them, and represents the res
 #### Output
 The program should output two natural numbers `m` and `n` such that `m/n` = `a/b` + `c/d` and the fraction `m/n` is in its irreducible form.
 
+#### Example
 #### Input
 ```plaintext
 1 2 1 2
@@ -76,6 +77,45 @@ The program should output two natural numbers `m` and `n` such that `m/n` = `a/b
 #### Output
 ```plaintext
 1 1
+```
+
+
+## **Algorithm: Travelling in Moscow**
+
+### Description
+During one of his campaigns, an old knight Yury Long-Legged found a huge planar field with an interesting anomaly. When standing on the field, it was only possible to move along specific trajectories: either along the lines that cross a fixed point `K` or along concentric circles centered at the same point. Moving along any other trajectory was impossible.
+
+The knight was so impressed by the place that he decided to build a city on the field. Point `K` was pronounced the center of the knight's lands and the starting point of all roads. But then the knight wondered what minimal distance he will have to travel while walking from point `A` to point `B` on the field.
+
+While moving, one can drop the current trajectory at any moment and pick another arc or radial line passing through one's current location. The distance traveled is the sum of the distances traveled along all radial and circular parts of the route.
+
+### Problem Statement
+#### Input
+- The first line of the input contains four integers — coordinates of point `A` (`xA` and `yA`) followed by coordinates of point `B` (`xB` and `yB`). Point `K` is located at the origin. All coordinates don't exceed `10^6` by absolute value.
+
+#### Output
+Outputs a single number: the minimal distance that knight will have to travel on the way from `A` to `B`. The answer is considered correct if absolute or relative error is no more than `10^-6`.
+
+#### Example 1
+#### Input
+```plaintext
+0 5 4 3
+```
+
+#### Output
+```plaintext
+4.636476090008
+```
+
+#### Example 2
+#### Input
+```plaintext
+0 5 4 -3
+```
+
+#### Output
+```plaintext
+10.000000000000
 ```
 
 

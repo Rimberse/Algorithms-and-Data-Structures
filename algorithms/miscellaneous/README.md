@@ -119,6 +119,7 @@ Outputs a single number: the minimal distance that knight will have to travel on
 ```
 
 
+
 ## How to Run
 To execute the program, follow these steps:
 

@@ -1,255 +1,158 @@
-# Sorting
-This directory contains templates/implementations of sorting algorithms: *Quick sort, Merge sort, Radix sort, etc*..
+# Miscellaneous
+This directory contains templates/implementations of various algorithms.
 
 **Note**
-Each sorting algorithm is implemented by solving a simple and concise problem to demonstrate its functionality and resulting output.
+Each algorithm is implemented by solving a simple and concise problem to demonstrate its functionality and resulting output.
 
 
-## **Algorithm: Partition**
+## **Algorithm: Distinct from minimum on sequence**
 
 ### Description
-The partition algorithm is a fundamental step in the quicksort algorithm. It divides a set of elements into two parts based on a specified predicate. This README provides details on the input format, output format, and examples for the partition algorithm.
+Given a sequence of integers `a1, a2, ..., an`. Queries are defined: find any element in the sequence in the range from `L` to `R` inclusive, which is not equal to the minimum in that range.
 
 ### Problem Statement
 #### Input
-- The first line of the input file contains the number `N` - the number of elements in the array (0 ≤ `N` ≤ 10^6).
-- The second line contains `N` integers `ai`, separated by spaces (-10^9 ≤ `ai` ≤ 10^9).
-- The third line contains the pivot element `x` (-10^9 ≤ `x` ≤ 10^9). Note that `x` does not necessarily occur among `ai`.
+- The first line contains two integers `N`, 1 ≤ `N` ≤ 100, and `M`, 1 ≤ `M` ≤ 1000 — the length of the sequence and the number of queries, respectively.
+- The second line contains the sequence itself, where 0 ≤ `ai` ≤ 1000.
+- Starting from the third line, `M` queries are listed, consisting of the boundaries of the range `L` and `R`, where `L`, `R` are indices of the array, numbered from 0..
 
 #### Output
-Outputs the result of the algorithm using the "less than x" predicate:
-- On the first line, outputs the number of array elements less than `x`.
-- On the second line, outputs the number of all others.
+For each query, prints the answer in a separate line — any element in `[L, R]`, except the minimum. If there is no such element, prints `"NOT FOUND"`.
 
 #### Example 1
 #### Input
 ```plaintext
-5
-1 9 4 2 3
-3
+10 5
+1 1 1 2 2 2 3 3 3 10
+0 1
+0 3
+3 4
+7 9
+3 7
 ```
 
 #### Output
 ```plaintext
+NOT FOUND
 2
+NOT FOUND
+10
 3
 ```
 
 #### Example 2
 #### Input
 ```plaintext
-0
-
-0
+4 2
+1 1 1 2
+0 2
+0 3
 ```
 
 #### Output
 ```plaintext
-0
-0
+NOT FOUND
+2
 ```
 
-#### Example 3
-#### Input
-```plaintext
-1
-0
-0
-```
 
-#### Output
-```plaintext
-0
-1
-```
-
-### Implementation Notes
-To solve the problem, it is recommended implement a function that takes a predicate and a pair of iterators defining an array (or an array and two indices in it) and returns the partition point, i.e., the iterator (index) at the end of the part that contains elements satisfying the specified predicate. This function can then be used to implement sorting.
-
-
-## **Algorithm: Quick Sort**
+## **Algorithm: Add Two Fractions**
 
 ### Description
-Implementation of quicksort.
-At each step, it chooses a pivot element and performs partition around it. Then recursively run the algorithm on the two parts into which the original array is divided.
+Given two rational fractions: `a/b` and `c/d`. Adds them, and represents the result in the form of an irreducible fraction `m/n`.
 
 ### Problem Statement
 #### Input
-- The first line of the input file contains the number `N` — the number of elements in the array (0 ≤ `N` ≤ 10^6).
-- The second line contains `N` integers `ai`, separated by spaces (-10^9 ≤ `ai` ≤ 10^9).
+- The program receives `4` natural numbers `a, b, c, d`, each of which is not greater than 100.
 
 #### Output
-Prints the result of the sorting, i.e., `N` integers separated by spaces.
+The program should output two natural numbers `m` and `n` such that `m/n` = `a/b` + `c/d` and the fraction `m/n` is in its irreducible form.
 
 #### Example
 #### Input
 ```plaintext
-5
-1 5 2 4 3
+1 2 1 2
 ```
 
 #### Output
 ```plaintext
-1 2 3 4 5
+1 1
 ```
 
-## Implementation Notes
-We can use the function implemented in the partition algorithm.
 
-
-## **Algorithm: Merge**
+## **Algorithm: Travelling in Moscow**
 
 ### Description
-The basic algorithm for merge sort is the merging of two sorted arrays into one ordered array. This operation is performed in linear time with linear memory consumption. Implementation of the merge of two arrays is the first step to write a merge sort.
+During one of his campaigns, an old knight Yury Long-Legged found a huge planar field with an interesting anomaly. When standing on the field, it was only possible to move along specific trajectories: either along the lines that cross a fixed point `K` or along concentric circles centered at the same point. Moving along any other trajectory was impossible.
+
+The knight was so impressed by the place that he decided to build a city on the field. Point `K` was pronounced the center of the knight's lands and the starting point of all roads. But then the knight wondered what minimal distance he will have to travel while walking from point `A` to point `B` on the field.
+
+While moving, one can drop the current trajectory at any moment and pick another arc or radial line passing through one's current location. The distance traveled is the sum of the distances traveled along all radial and circular parts of the route.
 
 ### Problem Statement
 #### Input
-- The input file's first line contains the number `N` — the number of elements in the first array (0 ≤ `N` ≤ 10^6).
-- The second line contains `N` integers `ai`, separated by spaces, sorted in non-decreasing order (-10^9 ≤ `ai` ≤ 10^9).
-- The third line of the input file contains the number `M` — the number of elements in the second array (0 ≤ `M` ≤ 10^6).
-- The fourth line contains `M` integers `bi`, separated by spaces, sorted in non-decreasing order (-10^9 ≤ `bi` ≤ 10^9).
+- The first line of the input contains four integers — coordinates of point `A` (`xA` and `yA`) followed by coordinates of point `B` (`xB` and `yB`). Point `K` is located at the origin. All coordinates don't exceed `10^6` by absolute value.
 
 #### Output
-Outputs the result of merging these two arrays, i.e., `M` + `N` integers separated by spaces, in non-decreasing order.
+Outputs a single number: the minimal distance that knight will have to travel on the way from `A` to `B`. The answer is considered correct if absolute or relative error is no more than `10^-6`.
 
 #### Example 1
 #### Input
 ```plaintext
-5
-1 3 5 5 9
-3
-2 5 6
+0 5 4 3
 ```
 
 #### Output
 ```plaintext
-1 2 3 5 5 6 9
+4.636476090008
 ```
 
 #### Example 2
 #### Input
 ```plaintext
-1
-0
-0
+0 5 4 -3
 ```
 
 #### Output
 ```plaintext
-0
+10.000000000000
 ```
 
-#### Example 3
-#### Input
-```plaintext
-0
-1
-0
-```
 
-#### Output
-```plaintext
-0
-```
-
-## Implementation Notes
-To solve this problem, it is recommended to implement a function that takes two pairs of iterators as input, defining two arrays, and an iterator to the beginning of the buffer where the result should be written. Iterators can be replaced by passing arrays and indices in them. In this form, it will be convenient to use this function to implement the merge sort.
-
-
-## **Algorithm: Merge Sort**
+## **Algorithm: Anagram**
 
 ### Description
-At each step, merge sort algorithm divides the array into two parts, sorts them independently, and merges them using the merge function (implemented in `Merging.java`).
+There are two strings. Checks if one string is an anagram of the other. An anagram is a string obtained from another by rearranging the letters.
 
 ### Problem Statement
 #### Input
-- The first line of the input file contains the number `N` — the number of elements in the array (0 ≤ `N` ≤ 10^6).
-- The second line contains `N` integers `ai`, separated by spaces (-10^9 ≤ `ai` ≤ 10^9).
+- The strings consist of lowercase Latin letters, with a maximum length of `100000`. Each one is written on a separate line.
 
 #### Output
-Prints the result of the sort, i.e., `N` integers separated by spaces, in non-decreasing order.
+Prints `YES` if one of the strings is an anagram of the other and `NO` if it is otherwise.
 
-#### Example
+#### Example 1
 #### Input
 ```plaintext
-5
-1 5 2 4 3
+dusty
+study
 ```
 
 #### Output
 ```plaintext
-1 2 3 4 5
+YES
 ```
 
-## Implementation Notes
-It is recommended to use the function implemented in `Merging.java`.
-
-
-## **Algorithm: Radix Sort**
-
-### Description
-Radix sort is one of the sorting algorithms that operates almost in linear time with respect to the size of the array to be sorted. This efficiency is achieved by utilizing the internal structure of the objects being sorted. Initially, this algorithm was used for sorting punched cards. Its first computer implementation was created at `MIT` by `Harold N. Seward`. Let's describe the algorithm in more detail.
-
-Consider an array of strings, `s1, ..., si`, where all strings have the same length, `m`. The algorithm consists of `m` phases. In the `i-th` phase, the strings are sorted based on their `i-th` letter from the end. This process occurs as follows: for simplicity, let's consider strings consisting of digits from `0` to `9` in this task. For each digit, a "bucket" is created, and then the strings `si` are distributed into the "buckets" according to the `i-th` digit from the end. Strings with the `i-th` digit from the end equal to `j` go into the `j-th` bucket (for example, the string `123` will go into the third bucket in the first phase, the second bucket in the second phase, and the first bucket in the third phase). After that, elements are extracted from the buckets in the order of increasing bucket number. Thus, after the first phase, the strings are sorted by the last digit, after two phases - by the last two digits, ..., after `m` phases - by all digits. It is crucial that the elements in the buckets preserve the same order as in the original array (before the start of this phase). For example, if the array before the first phase looks like: `111, 112, 211, 311`, then the elements will be distributed among the buckets as follows: in the first bucket: `111, 211, 311`, and in the second: `112`.
-
-This program clearly demonstrates the operation of this algorithm on a given array.
-
-### Problem Statement
+#### Example 2
 #### Input
-- The first line of the input file contains an integer n (1 ≤ `n` ≤ 1000).
-- The following `n` lines each contain one string `si`.
-- The lengths of all `si` are the same and do not exceed 20.
-- All `si` consist only of digits from `0` to `9`.
-
-#### Output
-Outputs the original array of strings, the state of the "buckets" after distributing the elements to them for each phase, and the sorted array in the output file. Follows the format given in the example.
-
-## Example
-### Input
 ```plaintext
-9
-12
-32
-45
-67
-98
-29
-61
-35
-09
+rat
+bat
 ```
 
 #### Output
 ```plaintext
-Initial array:
-12, 32, 45, 67, 98, 29, 61, 35, 09
-**********
-Phase 1
-Bucket 0: empty
-Bucket 1: 61
-Bucket 2: 12, 32
-Bucket 3: empty
-Bucket 4: empty
-Bucket 5: 45, 35
-Bucket 6: empty
-Bucket 7: 67
-Bucket 8: 98
-Bucket 9: 29, 09
-**********
-Phase 2
-Bucket 0: 09
-Bucket 1: 12
-Bucket 2: 29
-Bucket 3: 32, 35
-Bucket 4: 45
-Bucket 5: empty
-Bucket 6: 61, 67
-Bucket 7: empty
-Bucket 8: empty
-Bucket 9: 98
-**********
-Sorted array:
-09, 12, 29, 32, 35, 45, 61, 67, 98
+NO
 ```
 
 

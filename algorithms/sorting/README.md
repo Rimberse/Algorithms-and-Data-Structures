@@ -17,7 +17,7 @@ Given a sequence of integers `a1, a2, ..., an`. Queries are defined: find any el
 - Starting from the third line, `M` queries are listed, consisting of the boundaries of the range `L` and `R`, where `L`, `R` are indices of the array, numbered from 0..
 
 #### Output
-For each query, prints the answer in a separate line — any element in `[L, R]`, except the minimum. If there is no such element, prints `"NOT FOUND"`.
+- For each query, prints the answer in a separate line — any element in `[L, R]`, except the minimum. If there is no such element, prints `"NOT FOUND"`.
 
 #### Example 1
 #### Input
@@ -66,7 +66,7 @@ Given two rational fractions: `a/b` and `c/d`. Adds them, and represents the res
 - The program receives `4` natural numbers `a, b, c, d`, each of which is not greater than 100.
 
 #### Output
-The program should output two natural numbers `m` and `n` such that `m/n` = `a/b` + `c/d` and the fraction `m/n` is in its irreducible form.
+- The program should output two natural numbers `m` and `n` such that `m/n` = `a/b` + `c/d` and the fraction `m/n` is in its irreducible form.
 
 #### Example
 #### Input
@@ -94,7 +94,7 @@ While moving, one can drop the current trajectory at any moment and pick another
 - The first line of the input contains four integers — coordinates of point `A` (`xA` and `yA`) followed by coordinates of point `B` (`xB` and `yB`). Point `K` is located at the origin. All coordinates don't exceed `10^6` by absolute value.
 
 #### Output
-Outputs a single number: the minimal distance that knight will have to travel on the way from `A` to `B`. The answer is considered correct if absolute or relative error is no more than `10^-6`.
+- Outputs a single number: the minimal distance that knight will have to travel on the way from `A` to `B`. The answer is considered correct if absolute or relative error is no more than `10^-6`.
 
 #### Example 1
 #### Input
@@ -129,7 +129,7 @@ There are two strings. Checks if one string is an anagram of the other. An anagr
 - The strings consist of lowercase Latin letters, with a maximum length of `100000`. Each one is written on a separate line.
 
 #### Output
-Prints `YES` if one of the strings is an anagram of the other and `NO` if it is otherwise.
+- Prints `YES` if one of the strings is an anagram of the other and `NO` if it is otherwise.
 
 #### Example 1
 #### Input

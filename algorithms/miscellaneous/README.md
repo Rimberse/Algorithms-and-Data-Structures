@@ -119,6 +119,42 @@ Outputs a single number: the minimal distance that knight will have to travel on
 ```
 
 
+## **Algorithm: Anagram**
+
+### Description
+There are two strings. Checks if one string is an anagram of the other. An anagram is a string obtained from another by rearranging the letters.
+
+### Problem Statement
+#### Input
+- The strings consist of `lowercase` Latin letters, with a maximum length of `100000`. Each one is written on a separate line.
+
+#### Output
+Print `YES` if one of the strings is an anagram of the other and `NO` if it is otherwise.
+
+#### Example 1
+#### Input
+```plaintext
+dusty
+study
+```
+
+#### Output
+```plaintext
+YES
+```
+
+#### Example 2
+#### Input
+```plaintext
+rat
+bat
+```
+
+#### Output
+```plaintext
+NO
+```
+
 
 ## How to Run
 To execute the program, follow these steps:

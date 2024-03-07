@@ -156,6 +156,46 @@ NO
 ```
 
 
+## **Algorithm: Average level**
+
+### Description
+There are `n` students in group 191, each of them has a diﬀerent rating `ai`. It is time to choose the monitor of the group; for this, the students want to choose a monitor in such a way that the total level of dissatisfaction of the group is minimal. The level of dissatisfaction of the `i-th` student with electing the `j-th` student as monitor equals `|ai − aj∣`.
+For example, if a group has three students with ratings of 1, 3, and 4 and elects the second as group monitor, then the level of dissatisfaction of the group will be `|1 − 3| + |3 − 3| + |4 − 3| = 3`.
+Calculate the level of dissatisfaction of the group with each student elected as monitor.
+
+### Problem Statement
+#### Input
+- The ﬁrst line contains a single integer `n` (1 ≤ `n` ≤ 10^5)  — the number of students in the group. The second line contains `n` integers `a1, a2, …, an`, **in non-decreasing order**.
+- (0 ≤ `a1` ≤ `a2` ≤ `…` ≤ `an` ≤ 10^4) — students’ ratings.
+
+#### Output
+Output `n` numbers separated by spaces, the `i-th` of which will represent the level of dissatisfaction of the group when the `i-th` student is elected as the monitor.
+
+#### Example 1
+#### Input
+```plaintext
+3
+1 3 4
+```
+
+#### Output
+```plaintext
+5 3 4 
+```
+
+#### Example 2
+#### Input
+```plaintext
+5
+3 7 8 10 15
+```
+
+#### Output
+```plaintext
+28 16 15 17 32 
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

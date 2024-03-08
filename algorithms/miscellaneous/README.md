@@ -196,6 +196,34 @@ Output `n` numbers separated by spaces, the `i-th` of which will represent the l
 ```
 
 
+## **Algorithm: Elevator**
+
+### Description
+On December `31th`, all employees of a well-known IT company are heading out to celebrate the New Year! Buses are already waiting in the office parking lot to take them to the restaurant. It is known that on the `i-th` floor, there are `ai` employees working, and the parking lot is located on the ground floor. Initially, the elevator is on the floor with the parking lot. What is the minimum amount of time the elevator will take to transport all people to the parking lot? It is known that the elevator moves at a speed of one floor per second, and boarding and disembarking happen instantly.
+
+### Problem Statement
+#### Input
+- The first line contains a single integer `k` (1 ≤ `k` ≤ 10^9) — the number of people the elevator can accommodate in one trip. The second line contains a single integer `n` — the number of floors in the building. The next `n` (1 ≤ `n` ≤ 10^5) lines each contain a non-negative integer `ai` (0 ≤ `ai` ≤ 10^9), representing the number of employees on floor number `i`.
+
+#### Output
+Outputs a single integer — the minimum number of seconds required for all employees to be on the parking lot.
+
+#### Example
+#### Input
+```plaintext
+2
+3
+3
+0
+1
+```
+
+#### Output
+```plaintext
+8
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

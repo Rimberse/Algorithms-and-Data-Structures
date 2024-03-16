@@ -224,6 +224,78 @@ Outputs a single integer — the minimum number of seconds required for all empl
 ```
 
 
+## **Algorithm: Greatest area square side**
+
+### Description
+Rabbits are very curious creatures. They love studying geometry while hopping around in the flowerbeds. Our rabbit is just like that. Today, he decided to study a new shape — a square.
+The rabbit runs across the flowerbed — a grid of `N × M` cells. Some of them have carrots planted, while others do not.
+Algorithm helps the rabbit find the side length of the largest square completely filled with carrots.
+
+### Problem Statement
+#### Input
+- The first line contains two natural numbers `N` and `M` (1 ≤ `N, M` ≤ 100). Following that, in `N` lines, there are `M` numbers separated by spaces (the number is 0 if there are no carrots in the cell or 1 if there are).
+
+#### Output
+Outputs a single number — the side length of the largest square filled with carrots.
+
+#### Example 1
+#### Input
+```plaintext
+4 5
+0 0 0 1 0
+0 1 1 1 0
+0 0 1 1 0
+1 0 1 0 0
+```
+
+#### Output
+```plaintext
+2
+```
+
+#### Example 2
+#### Input
+```plaintext
+10 10
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+```
+
+#### Output
+```plaintext
+10
+```
+
+#### Example 3
+#### Input
+```plaintext
+10 10
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+```
+
+#### Output
+```plaintext
+0
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

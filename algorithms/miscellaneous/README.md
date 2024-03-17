@@ -296,6 +296,60 @@ Outputs a single number — the side length of the largest square filled with ca
 ```
 
 
+## **Algorithm: Contest Results**
+
+### Description
+To assess the quality of programming education, one parameter is calculated in each group of students — the total number of problems solved by the students.
+It is known that in the first group, the total number of problems solved in the contest is `a`, and in the second group, it is `b`. In total, `n` problems were proposed in the contest, and it is also known that each student solved at least one (and no more than `n`) problem.
+Given the values of `a`, `b`, and `n`, determine whether there could have been strictly more students in the first group than in the second.
+
+### Problem Statement
+#### Input
+- Three integers `a`, `b`, `n` are inputted (0 ≤ `a`, `b` ≤ 10000, 1 ≤ `n` ≤ 10000).
+
+#### Output
+Outputs `Yes` if there could have been strictly more students in the first group than in the second, and `No` otherwise.
+
+#### Example 1
+#### Input
+```plaintext
+60
+30
+4
+```
+
+#### Output
+```plaintext
+Yes
+```
+
+#### Example 2
+#### Input
+```plaintext
+30
+30
+1
+```
+
+#### Output
+```plaintext
+No
+```
+
+#### Example 3
+#### Input
+```plaintext
+30
+150
+4
+```
+
+#### Output
+```plaintext
+No
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

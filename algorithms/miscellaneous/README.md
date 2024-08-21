@@ -396,6 +396,37 @@ no
 ```
 
 
+## **Algorithm: Group Project**
+
+### Description
+There are `n` students in the "World Culture" program. The instructor has assigned a group project. To complete this assignment, students must form groups with a size ranging from `a` to `b` students. Algorithm determines if it is possible to divide all students into groups according to these rules, or if the instructor made a mistake.
+
+### Problem Statement
+#### Input
+- The first line contains an integer `t` (1 ≤ `t` ≤ 100) — the number of test cases. For each test case, three integers `n`, `a`, and `b` are provided (1 ≤ `n` ≤ 10^9, 1 ≤ `a` ≤ `b` ≤ n) — the total number of students and the range of allowed group sizes.
+
+#### Output
+For each test case, outputs `"YES"` if it is possible to divide the students into groups, and `"NO"` if it is not.
+
+#### Example
+#### Input
+```plaintext
+4
+10 2 3
+11 7 8
+28 4 6
+3 1 2
+```
+
+#### Output
+```plaintext
+YES
+NO
+YES
+YES
+```
+
+
 ## How to Run
 To execute the program, follow these steps:
 

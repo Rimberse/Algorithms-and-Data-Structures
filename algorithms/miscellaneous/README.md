@@ -301,7 +301,7 @@ Outputs a single number — the side length of the largest square filled with ca
 ### Description
 To assess the quality of programming education, one parameter is calculated in each group of students — the total number of problems solved by the students.
 It is known that in the first group, the total number of problems solved in the contest is `a`, and in the second group, it is `b`. In total, `n` problems were proposed in the contest, and it is also known that each student solved at least one (and no more than `n`) problem.
-Given the values of `a`, `b`, and `n`, determine whether there could have been strictly more students in the first group than in the second.
+Given the values of `a`, `b`, and `n`, determines whether there could have been strictly more students in the first group than in the second.
 
 ### Problem Statement
 #### Input
@@ -347,6 +347,52 @@ No
 #### Output
 ```plaintext
 No
+```
+
+
+## **Algorithm: Correct Bracket Sequence**
+
+### Description
+Given a sequence consisting of round `()`, square `[]`, and curly `{}` brackets the program determines whether the given sequence of brackets is valid. An empty sequence is considered valid. If `A` is valid, then the sequences `(A)`, `[A]`, and `{A}` are also valid. If `A` and `B` are valid sequences, then the concatenation `AB` is also valid.
+
+### Problem Statement
+#### Input
+- A single line containing a sequence of brackets, with a maximum length of 100,000 characters.
+
+#### Output
+If the given sequence is valid, the program outputs the string `"yes"`. Otherwise, it outputs `"no"`.
+
+#### Example 1
+#### Input
+```plaintext
+()[]
+```
+
+#### Output
+```plaintext
+yes
+```
+
+#### Example 2
+#### Input
+```plaintext
+([)]
+```
+
+#### Output
+```plaintext
+no
+```
+
+#### Example 3
+#### Input
+```plaintext
+(
+```
+
+#### Output
+```plaintext
+no
 ```
 
 
